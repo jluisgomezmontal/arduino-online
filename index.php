@@ -25,19 +25,21 @@ $sec = "15";
 	
 	
    
-	<body>
+<body>
 		
-	
 
 
+<img class="img-fluid" src="https://www.uhipocrates.edu.mx/assets/img/logo.png" alt="">
 <div class="container">
 	<div class="py-5">
 
-		<h1 class="text-info" >Jose Luis Gomez Montalvan</h1>
+		<img class="img-fluid" src="./jlgm.jpeg" alt="">		
+		<h1 class="text-info pt-5" >Jose Luis Gomez Montalvan</h1>
 		<h2 class="text-info" >Ingenieria en Sistemas Computacionales</h2>
 		<h2 class="text-info" >4º Semestre </h2>
+		<hr>
 	</div>
-</div>
+
 <?php
 include("database_connect.php"); //We include the database_connect.php which has the data for the connection to the database
 
@@ -54,14 +56,10 @@ $result = mysqli_query($con,"SELECT * FROM ESPtable2");//table select
 //Now we create the table with all the values from the database	  
 echo "
 
-<div class='container' >
 <table class='table'>
 <thead>
 <tr>
 
-
-		<div  >
-		</div>
 
 		<h2 class='text-warning text-center'>Indicadores Booleanos</h2>	
 		</tr>
@@ -73,11 +71,11 @@ echo "
         <td>Control 1</td>
         <td>Control 2 </td>
 		<td>Control 3 </td>
-		<td>Control 4</td>
-        <td>Control 5 </td>		
+		<td>Control 4 </td>
+        <td>Control 5 </td>	
+			
 		</tr>  
 		
-</div>
 
 		";
 		  
@@ -222,10 +220,9 @@ if (mysqli_connect_errno()) {
 $result = mysqli_query($con,"SELECT * FROM ESPtable2");//table select
 
 echo "
-<div class='container' >
 
 
-<table class='table' style='font-size: 30px;'>
+<table class='table'>
 	<h2>
 	<tr>
 	<h2 class='text-warning text-center'>Controles Numericos</h2 >	
@@ -240,7 +237,6 @@ echo "
 	<td>Control 4 </td>
 	<td>Control 5 </td>
 	</tr>  
-	</div>
 	";
 	
 while($row = mysqli_fetch_array($result)) {
@@ -318,7 +314,6 @@ $result = mysqli_query($con,"SELECT * FROM ESPtable2");//table select
 
 		
    echo "
-   <div class='container' >
 
    <table class='table' style='font-size: 30px;'>
    <thead>
@@ -330,8 +325,7 @@ $result = mysqli_query($con,"SELECT * FROM ESPtable2");//table select
 		<tbody>
 		<tr class='active'>
         <td>Texto</td>        
-		</tr>  
-		</div>  
+		</tr> 
 		";
 
 while($row = mysqli_fetch_array($result)) {
@@ -346,7 +340,7 @@ while($row = mysqli_fetch_array($result)) {
   	<input style='width: 100%;' type='text' name='value' value=$current_text_1  size='100'>
   	<input type='hidden' name='unit' value=$unit_id >
   	<input type='hidden' name='column' value=$column11 >
-  	<input type= 'submit' name= 'change_but' class='btn btn-info' value='Mandar'></form></td>";
+  	<input type= 'submit' name= 'change_but' class='mt-3 btn btn-info' value='Mandar'></form></td>";
 	
     echo "</tr>
 	  </tbody>";      
@@ -385,7 +379,6 @@ if (mysqli_connect_errno()) {
 $result = mysqli_query($con,"SELECT * FROM ESPtable2");//table select
 
 echo "
-<div class='container' >
 
 <table class='table' style='font-size: 30px;'>
 <thead>
@@ -401,7 +394,6 @@ echo "
         <td>Indicador 2 </td>
 		<td>Indicador 3 </td>
 		</tr>  
-		</div>
 		";
 	  
 	
@@ -489,7 +481,6 @@ $result = mysqli_query($con,"SELECT * FROM ESPtable2");//table select
 
 	
 echo "
-<div class='container' >
 
 <table class='table' style='font-size: 30px;'>
 <thead>
@@ -505,7 +496,6 @@ echo "
 <td>Numero Recibido 3 </td>
 <td>Numero Recibido 4 </td>
 </tr>  
-</div>
 		";
 		  
 
@@ -527,7 +517,7 @@ echo "</table>
 <br>
 ";
 ?>
-
+</div>
 </body>
 		
 		
